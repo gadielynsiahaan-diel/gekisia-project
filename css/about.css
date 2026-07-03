@@ -1,0 +1,179 @@
+/* HERO */
+
+.about-hero {
+
+  height: 55vh;
+
+  background:
+  linear-gradient(
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5)
+  ),
+
+  url('https://images.unsplash.com/photo-1519491050282-cf00c82424b4?q=80&w=1200&auto=format&fit=crop');
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  color: white;
+
+  position: relative;
+}
+
+.about-content h1 {
+
+  font-size: 70px;
+
+  font-weight: 800;
+
+  line-height: 1.5;
+}
+
+.about-content p {
+
+  margin-top: 20px;
+
+  font-size: 22px;
+}
+
+.about-content {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+}
+
+/* VISI SECTION */
+
+.visi-section {
+
+  padding: 120px 80px;
+
+  background: #f5f7fb;
+}
+
+.visi-container {
+
+  display: grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(320px,1fr));
+
+  gap: 35px;
+}
+
+/* CARD */
+
+.visi-card {
+
+  background: white;
+
+  padding: 60px 40px;
+
+  border-radius: 30px;
+
+  text-align: center;
+
+  position: relative;
+
+  overflow: hidden;
+
+  box-shadow:
+  0 10px 40px rgba(0,0,0,0.08);
+
+  transition: 0.4s;
+}
+
+.visi-card::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 6px;
+
+  background: linear-gradient(
+    90deg,
+    #1e88e5,
+    #ff1744
+  );
+}
+
+.visi-card:hover {
+
+  transform: translateY(-10px);
+}
+
+.visi-card i {
+
+  font-size: 70px;
+
+  color: #222;
+
+  margin-bottom: 30px;
+}
+
+.visi-card h2 {
+
+  font-size: 38px;
+
+  color: #1565c0;
+
+  margin-bottom: 25px;
+
+  letter-spacing: 4px;
+}
+
+.visi-card p {
+
+  font-size: 20px;
+
+  line-height: 2;
+
+  color: #444;
+}
+
+.motto {
+
+  color: #1565c0 !important;
+
+  font-style: italic;
+
+  font-weight: 700;
+}
+
+.visi-card span {
+
+  display: block;
+
+  margin-top: 30px;
+
+  color: #555;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+  .about-content h1{
+    font-size:45px;
+  }
+
+  .visi-section{
+    padding:80px 20px;
+  }
+
+}

@@ -1,0 +1,565 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#f5f7fa;
+}
+
+/* ==========================
+   NAVBAR
+========================== */
+
+.navbar{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    background:#1f4b7a;
+
+    padding:15px 50px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    z-index:999;
+}
+
+.logo-section{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+}
+
+.logo-section img{
+
+    width:55px;
+}
+
+.logo-section h2{
+
+    color:white;
+
+    margin:0;
+}
+
+.logo-section p{
+
+    color:white;
+
+    font-size:12px;
+}
+
+.navbar nav{
+
+    display:flex;
+
+    gap:25px;
+}
+
+.navbar nav a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:500;
+}
+
+.navbar nav a:hover{
+
+    color:#29b6f6;
+}
+
+/* HERO */
+
+.org-hero{
+
+    margin-top:80px;
+
+    height:450px;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.4),
+        rgba(0,0,0,.4)
+    ),
+    url("https://images.unsplash.com/photo-1438032005730-c779502df39b?w=1920");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    color:white;
+}
+
+.overlay{
+
+    color:white;
+}
+
+.overlay h1{
+
+    font-size:72px;
+    font-weight:800;
+
+    text-shadow:
+    0 5px 15px rgba(0,0,0,.5);
+}
+
+.overlay p{
+
+    font-size:22px;
+
+    margin-top:15px;
+
+    text-shadow:
+    0 3px 10px rgba(0,0,0,.5);
+}
+
+/* CONTAINER */
+
+.org-container{
+
+    width:90%;
+    margin:auto;
+
+    padding:50px 0;
+}
+
+/* TITLE */
+
+.section-title{
+
+    color:#1565c0;
+
+    border-left:5px solid #29b6f6;
+
+    padding-left:12px;
+
+    font-size:28px;
+
+    margin-bottom:25px;
+    margin-top:50px;
+}
+
+/* PEMERINTAHAN */
+
+.government-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:25px;
+}
+
+.government-card{
+
+    color:white;
+
+    text-align:center;
+
+    padding:45px;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 10px 20px rgba(0,0,0,.08);
+}
+
+.government-card i{
+
+    font-size:50px;
+
+    margin-bottom:15px;
+}
+
+.government-card h3{
+
+    margin-bottom:15px;
+}
+
+.government-card p{
+
+    line-height:1.8;
+}
+
+.blue{
+
+    background:
+    linear-gradient(
+    135deg,
+    #35b8ee,
+    #247fb9
+    );
+}
+
+.red{
+
+    background:
+    linear-gradient(
+    135deg,
+    #e0002b,
+    #b70016
+    );
+}
+
+/* PENASEHAT */
+
+.advisor-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:20px;
+}
+
+.advisor-card{
+
+    background:white;
+
+    border-radius:16px;
+
+    padding:20px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    border-left:3px solid #29b6f6;
+
+    box-shadow:
+    0 8px 20px rgba(0,0,0,.05);
+}
+
+.advisor-icon{
+
+    width:60px;
+    height:60px;
+
+    border-radius:50%;
+
+    background:#2196f3;
+
+    color:white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:24px;
+}
+
+.advisor-card h3{
+
+    color:#0f254d;
+
+    margin-bottom:5px;
+}
+
+.advisor-card p{
+
+    color:#2196f3;
+}
+
+/* MPH */
+
+.mph-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:20px;
+}
+
+.mph-card{
+
+    color:white;
+
+    text-align:center;
+
+    padding:30px;
+
+    border-radius:18px;
+
+    box-shadow:
+    0 10px 20px rgba(0,0,0,.08);
+}
+
+.mph-card span{
+
+    display:block;
+
+    font-size:12px;
+
+    letter-spacing:2px;
+
+    margin-bottom:10px;
+}
+
+.mph-card h3{
+
+    font-size:18px;
+}
+
+.ketua{
+
+    background:#102f73;
+}
+
+.sekretaris{
+
+    background:#35aee5;
+}
+
+.bendahara{
+
+    background:#c4001b;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.government-grid,
+.advisor-grid,
+.mph-grid{
+
+    grid-template-columns:1fr;
+}
+
+.overlay h1{
+
+    font-size:45px;
+}
+
+}
+
+/* ==========================
+   MPL TABLE
+========================== */
+
+.mpl-table{
+    width:100%;
+    margin-top:20px;
+}
+
+.mpl-table table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.mpl-table th{
+
+    background:
+    linear-gradient(
+    90deg,
+    #35b8ee,
+    #247fb9
+    );
+
+    color:white;
+
+    text-align:left;
+
+    padding:14px 18px;
+
+    font-size:19px;
+}
+
+.mpl-table td{
+
+    padding:12px 18px;
+
+    border-bottom:
+    1px solid #d9eaf4;
+
+    font-size:18px;
+}
+
+.mpl-table tr:hover{
+
+    background:#f5fbff;
+}
+
+/* ==========================
+   BIRO
+========================== */
+
+.biro-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:15px;
+
+    width:100%;
+    margin-top:20px;
+}
+
+.biro-card{
+
+    background:white;
+
+    padding:20px;
+
+    border-radius:12px;
+
+    text-align:center;
+
+    color:#1565c0;
+
+    border-top:
+    3px solid #29b6f6;
+
+    box-shadow:
+    0 6px 15px rgba(0,0,0,.05);
+
+    transition:.3s;
+}
+
+.biro-card:hover{
+
+    transform:
+    translateY(-4px);
+}
+
+.biro-card i{
+
+    margin-right:8px;
+}
+
+.biro-card.full{
+
+    grid-column:
+    span 3;
+}
+
+/* ==========================
+   KOORDINATOR WILAYAH
+========================== */
+
+.korwil-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:15px;
+
+    margin-top:20px;
+    margin-bottom:50px;
+}
+
+.korwil-card{
+
+    background:white;
+
+    border-radius:15px;
+
+    padding:18px;
+
+    display:flex;
+
+    gap:15px;
+
+    align-items:flex-start;
+
+    box-shadow:
+    0 5px 15px rgba(0,0,0,.05);
+
+    border-top:2px solid #e3f2fd;
+}
+
+.korwil-number{
+
+    width:28px;
+    height:28px;
+
+    border-radius:50%;
+
+    background:#29b6f6;
+
+    color:white;
+
+    font-weight:700;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:13px;
+
+    flex-shrink:0;
+}
+
+.korwil-card h3{
+
+    margin:0;
+
+    color:#263238;
+
+    font-size:18px;
+}
+
+.korwil-card p{
+
+    margin:4px 0;
+
+    color:#37474f;
+
+    font-size:15px;
+}
+
+.korwil-card span{
+
+    color:#757575;
+
+    font-style:italic;
+
+    font-size:14px;
+}
+
+@media(max-width:768px){
+
+    .korwil-grid{
+
+        grid-template-columns:1fr;
+    }
+
+}

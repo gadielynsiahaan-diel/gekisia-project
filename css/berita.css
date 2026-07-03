@@ -1,0 +1,265 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#f5f7fa;
+}
+
+/* NAVBAR */
+
+.navbar{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    background:#1f4b7a;
+
+    padding:15px 50px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    z-index:999;
+}
+
+.logo-section{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+}
+
+.logo-section img{
+    width:55px;
+}
+
+.logo-section h2{
+    color:white;
+}
+
+.logo-section p{
+    color:white;
+    font-size:12px;
+}
+
+.navbar nav{
+
+    display:flex;
+
+    gap:25px;
+}
+
+.navbar nav a{
+
+    text-decoration:none;
+
+    color:white;
+
+    font-weight:500;
+}
+
+.navbar nav a:hover{
+
+    color:#29b6f6;
+}
+
+/* HERO */
+
+.hero{
+
+    margin-top:80px;
+
+    height:420px;
+
+    background:
+    linear-gradient(
+    rgba(0,0,0,.5),
+    rgba(0,0,0,.5)
+    ),
+    url("https://images.unsplash.com/photo-1438032005730-c779502df39b?w=1920");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    color:white;
+}
+
+.hero-overlay h1{
+
+    font-size:60px;
+    margin-bottom:15px;
+}
+
+.hero-overlay p{
+
+    font-size:20px;
+}
+
+/* CONTENT */
+
+.container{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:60px 0;
+}
+
+.content-card{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    margin-bottom:35px;
+
+    box-shadow:
+    0 5px 15px rgba(0,0,0,.08);
+}
+
+.section-title{
+
+    color:#1565c0;
+
+    margin-bottom:25px;
+
+    border-left:5px solid #29b6f6;
+
+    padding-left:15px;
+}
+
+/* FILE */
+
+.file-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+}
+
+.file-item{
+
+    text-decoration:none;
+
+    color:#1f4b7a;
+
+    background:#f8fbff;
+
+    padding:18px;
+
+    border-radius:10px;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.file-item:hover{
+
+    background:#e3f2fd;
+}
+
+.file-item i{
+
+    margin-right:10px;
+
+    color:#e53935;
+}
+
+/* DOKUMENTASI */
+
+.activity-card{
+
+    background:#fff;
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+    box-shadow:0 3px 10px rgba(0,0,0,.1);
+
+}
+
+.activity-card img{
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:cover;
+
+    display:block;
+
+}
+
+.activity-card h3{
+
+    padding:12px 15px 5px;
+
+    color:#1f4b7a;
+
+    font-size:18px;
+
+}
+
+.activity-card p{
+
+    padding:0 15px 15px;
+
+    color:#666;
+
+}
+
+.gallery{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+
+}
+
+.gallery img{
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:cover;
+
+    border-radius:12px;
+
+    transition:.3s;
+}
+
+.gallery img:hover{
+
+    transform:scale(1.03);
+}
