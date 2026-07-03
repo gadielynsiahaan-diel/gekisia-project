@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Login Admin GEKISIA</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/admin.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo-section">
+
+        <img src="logo.png" alt="Logo GEKISIA">
+
+        <div>
+            <h2>GEKISIA</h2>
+            <p>Gereja Kristen Injili di Indonesia</p>
+        </div>
+
+    </div>
+
+    <nav>
+
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="berita.html">Berita</a>
+
+    </nav>
+
+</header>
+
+<section class="login-section">
+
+  <div class="login-container">
+
+    <!-- LEFT -->
+
+    <div class="login-left">
+
+      <h1>GEKISIA</h1>
+
+      <p>
+        Gereja Kristen Injili di Indonesia
+      </p>
+
+    </div>
+
+    <!-- RIGHT -->
+
+    <div class="login-right">
+
+      <h2>Login Admin</h2>
+
+      <form id="loginForm">
+
+        <!-- ROLE -->
+
+        <div class="input-group">
+
+          <label>Pilih Role</label>
+
+          <select id="roleSelect">
+
+            <option value="">
+              -- Pilih Role --
+            </option>
+
+            <option value="gereja">
+              Admin Gereja
+            </option>
+
+            <option value="sinode">
+              Admin Sinode
+            </option>
+
+          </select>
+
+          <small class="error"></small>
+
+        </div>
+
+        <!-- GEREJA -->
+
+        <div class="input-group" id="churchGroup">
+
+          <label>Pilih Gereja</label>
+
+          <select id="churchSelect">
+
+            <option value="">
+              -- Pilih Gereja --
+            </option>
+
+            <option value="GEKISIA Palak Bengkerung">
+              GEKISIA Palak Bengkerung
+            </option>
+
+            <option value="GEKISIA Kota Bengkulu">
+              GEKISIA Kota Bengkulu
+            </option>
+
+            <option value="GEKISIA Manna">
+              GEKISIA Manna
+            </option>
+
+            <option value="GEKISIA Tais">
+              GEKISIA Tais
+            </option>
+
+            <option value="GEKISIA Kaur">
+              GEKISIA Kaur
+            </option>
+
+            <option value="GEKISIA Sukamaju">
+              GEKISIA Sukamaju
+            </option>
+
+            <option value="GEKISIA Air Petai">
+              GEKISIA Air Petai
+            </option>
+
+            <option value="GEKISIA Ergatai">
+              GEKISIA Ergatai
+            </option>
+
+            <option value="GEKISIA Tallo">
+              GEKISIA Tallo
+            </option>
+
+            <option value="GEKISIA Pring 7">
+              GEKISIA Pring 7
+            </option>
+
+            <option value="GEKISIA Talang Jawa">
+              GEKISIA Talang Jawa
+            </option>
+
+            <option value="GEKISIA Tanjung Harapan">
+              GEKISIA Tanjung Harapan
+            </option>
+
+            <option value="GEKISIA Sukasari">
+              GEKISIA Sukasari
+            </option>
+
+            <option value="GEKISIA Arga Makmur">
+              GEKISIA Arga Makmur
+            </option>
+
+            <option value="GEKISIA Taba Tembilang">
+              GEKISIA Taba Tembilang
+            </option>
+
+            <option value="GEKISIA Talang Tirta">
+              GEKISIA Talang Tirta
+            </option>
+
+            <option value="GEKISIA Sebayur-Limas">
+              GEKISIA Sebayur-Limas
+            </option>
+
+            <option value="GEKISIA Marga Sakti">
+              GEKISIA Marga Sakti
+            </option>
+
+            <option value="GEKISIA Padang Jaya">
+              GEKISIA Padang Jaya
+            </option>
+
+            <option value="GEKISIA Tebing Kandang">
+              GEKISIA Tebing Kandang
+            </option>
+
+            <option value="GEKISIA Ipuh">
+              GEKISIA Ipuh
+            </option>
+
+            <option value="GEKISIA Air Majunto">
+              GEKISIA Air Majunto
+            </option>
+
+            <option value="GEKISIA Sungai Kiang">
+              GEKISIA Sungai Kiang
+            </option>
+
+            <option value="GEKISIA Jayaloka">
+              GEKISIA Jayaloka
+            </option>
+
+            <option value="GEKISIA Lubuk Linggau">
+              GEKISIA Lubuk Linggau
+            </option>
+
+            <option value="GEKISIA Belalau">
+              GEKISIA Belalau
+            </option>
+
+            <option value="GEKISIA Jaya Bhakti">
+              GEKISIA Jaya Bhakti
+            </option>
+
+            <option value="GEKISIA Dharma Sakti">
+              GEKISIA Dharma Sakti
+            </option>
+
+            <option value="GEKISIA Sukakarya">
+              GEKISIA Sukakarya
+            </option>
+
+            <option value="GEKISIA Palembang">
+              GEKISIA Palembang
+            </option>
+
+            <option value="GEKISIA Seruyan">
+              GEKISIA Seruyan
+            </option>
+
+            <option value="GEKISIA Depok">
+              GEKISIA Depok
+            </option>
+
+            <option value="GEKISIA Batu Payung">
+              GEKISIA Batu Payung
+            </option>
+
+            <option value="GEKISIA Celengan">
+              GEKISIA Celengan
+            </option>
+
+            <option value="GEKISIA Deranuk">
+              GEKISIA Deranuk
+            </option>
+
+            <option value="GEKISIA Bambuk">
+              GEKISIA Bambuk
+            </option>
+
+            <option value="GEKISIA Tanjung">
+              GEKISIA Tanjung
+            </option>
+
+            <option value="GEKISIA Parigi">
+              GEKISIA Parigi
+            </option>
+
+            <option value="GEKISIA Jakarta Pusat">
+              GEKISIA Jakarta Pusat
+            </option>
+
+            <option value="GEKISIA Serpong">
+              GEKISIA Serpong
+            </option>
+
+            <option value="GEKISIA Jakarta Kramat">
+              GEKISIA Jakarta Kramat
+            </option>
+
+            <option value="GEKISIA Pelabuhan Ratu">
+              GEKISIA Pelabuhan Ratu
+            </option>
+
+            <option value="GEKISIA Bandung">
+              GEKISIA Bandung
+            </option>
+
+            <option value="GEKISIA Makassar">
+              GEKISIA Makassar
+            </option>
+
+            <option value="GEKISIA Buol">
+              GEKISIA Buol
+            </option>
+
+            <option value="GEKISIA Natar-Lampung">
+              GEKISIA Natar-Lampung
+            </option>
+
+            <option value="GEKISIA Binuang">
+              GEKISIA Binuang
+            </option>
+
+            <option value="GEKISIA RHS 2">
+              GEKISIA RHS 2
+            </option>
+
+            <option value="GEKISIA Santulangan">
+              GEKISIA Santulangan
+            </option>
+
+            <option value="GEKISIA Laubekri">
+              GEKISIA Laubekri
+            </option>
+
+            <option value="GEKISIA Medan">
+              GEKISIA Medan
+            </option>
+
+            <option value="GEKISIA Tembung">
+              GEKISIA Tembung
+            </option>
+
+            <option value="GEKISIA Pematang Siantar">
+              GEKISIA Pematang Siantar
+            </option>
+
+            <option value="GEKISIA Laut Dendang">
+              GEKISIA Laut Dendang
+            </option>
+
+            <option value="GEKISIA Batam">
+              GEKISIA Batam
+            </option>
+
+            <option value="GEKISIA Pasir Pangarayan">
+              GEKISIA Pasir Pangarayan
+            </option>
+
+            <option value="GEKISIA Muko-Muko">
+              GEKISIA Muko-Muko
+            </option>
+           
+          </select>
+
+          <small class="error"></small>
+
+        </div>
+
+        <!-- USERNAME -->
+
+        <div class="input-group">
+
+          <label>Username</label>
+
+          <input
+            type="text"
+            id="username"
+            placeholder="Masukkan Username"
+          >
+
+          <small class="error"></small>
+
+        </div>
+
+        <!-- PASSWORD -->
+
+        <div class="input-group">
+
+          <label>Password</label>
+
+          <input
+            type="password"
+            id="password"
+            placeholder="Masukkan Password"
+          >
+
+          <small class="error"></small>
+
+        </div>
+
+        <!-- BUTTON -->
+
+        <button type="submit">
+          Login
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+/* =========================
+   DROPDOWN ROLE
+========================= */
+
+const roleSelect =
+document.getElementById("roleSelect");
+
+const churchGroup =
+document.getElementById("churchGroup");
+
+/* HIDE AWAL */
+
+churchGroup.style.display = "none";
+
+/* SAAT ROLE BERUBAH */
+
+roleSelect.addEventListener(
+  "change",
+
+  function () {
+
+    if(this.value === "gereja") {
+
+      churchGroup.style.display =
+      "block";
+
+    }
+
+    else {
+
+      churchGroup.style.display =
+      "none";
+
+    }
+
+  }
+
+);
+
+</script>
+
+<script src="js/login.js"></script>
+
+</body>
+</html>

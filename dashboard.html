@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Dashboard Admin</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/admin.css">
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+  <!-- SIDEBAR -->
+
+  <aside class="sidebar">
+
+    <div class="sidebar-logo">
+
+      <h2>GEKISIA</h2>
+
+    </div>
+
+    <ul>
+
+      <li>
+        <a href="#">
+          <i class="fa-solid fa-house"></i>
+          Dashboard
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+          <i class="fa-solid fa-church"></i>
+          Data Gereja
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+          <i class="fa-solid fa-newspaper"></i>
+          Berita
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+          <i class="fa-solid fa-users"></i>
+          Jemaat
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+          <i class="fa-solid fa-calendar"></i>
+          Kegiatan
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+          <i class="fa-solid fa-file"></i>
+          Warta Gereja
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          Logout
+        </a>
+      </li>
+
+    </ul>
+
+  </aside>
+
+  <!-- MAIN -->
+
+  <main class="main-content">
+
+    <!-- TOPBAR -->
+
+    <div class="topbar">
+
+      <h1>Dashboard Admin</h1>
+
+      <div class="admin-profile">
+
+        <span>Admin Gereja</span>
+
+      </div>
+
+    </div>
+
+    <!-- CARD -->
+
+    <div class="dashboard-cards">
+
+      <div class="dashboard-card">
+
+        <h2>20</h2>
+
+        <p>Total Gereja</p>
+
+      </div>
+
+      <div class="dashboard-card">
+
+        <h2>5</h2>
+
+        <p>Total Korwil</p>
+
+      </div>
+
+      <div class="dashboard-card">
+
+        <h2>1200</h2>
+
+        <p>Total Jemaat</p>
+
+      </div>
+
+      <div class="dashboard-card">
+
+        <h2>15</h2>
+
+        <p>Berita Aktif</p>
+
+      </div>
+
+    </div>
+
+    <!-- TABLE -->
+
+    <div class="table-container">
+
+      <h2>Data Gereja</h2>
+
+      <table>
+
+        <thead>
+
+          <tr>
+
+            <th>Nama Gereja</th>
+            <th>Alamat</th>
+            <th>Pendeta</th>
+            <th>Status</th>
+
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr>
+
+            <td>GEKISIA Medan</td>
+            <td>Medan</td>
+            <td>Pdt. Samuel</td>
+            <td>Aktif</td>
+
+          </tr>
+
+          <tr>
+
+            <td>GEKISIA Binjai</td>
+            <td>Binjai</td>
+            <td>Pdt. Daniel</td>
+            <td>Aktif</td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </main>
+
+</div>
+
+</body>
+</html>
+
+<!-- FORM -->
+
+<div class="form-container">
+
+  <h2>Tambah Data Gereja</h2>
+
+  <form class="gereja-form">
+
+    <div class="form-group">
+
+      <label>Nama Gereja</label>
+
+      <input type="text">
+
+    </div>
+
+    <div class="form-group">
+
+      <label>Alamat</label>
+
+      <textarea></textarea>
+
+    </div>
+
+    <div class="form-group">
+
+      <label>Nama Pendeta</label>
+
+      <input type="text">
+
+    </div>
+
+    <div class="form-group">
+
+      <label>Upload Warta Gereja</label>
+
+      <input type="file">
+
+    </div>
+
+    <div class="form-group">
+
+      <label>Upload Kegiatan</label>
+
+      <input type="file">
+
+    </div>
+
+    <button type="submit">
+      Simpan Data
+    </button>
+
+  </form>
+
+</div>
