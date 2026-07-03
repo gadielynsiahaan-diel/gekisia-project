@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dashboard Admin Sinode</title>
+
+<link rel="stylesheet" href="../css/dashboard.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+    <div class="sidebar-logo">
+
+        <img src="../logo.png" class="logo">
+
+        <h2>GEKISIA</h2>
+
+        <p>Admin Panel</p>
+
+    </div>
+
+    <ul>
+
+        <li class="active">
+            <a href="dashboard-sinode.html">
+                <i class="fa-solid fa-house"></i>
+                Dashboard
+            </a>
+        </li>
+
+        <li>
+            <a href="berita-admin.html">
+                <i class="fa-solid fa-newspaper"></i>
+                Berita
+            </a>
+        </li>
+
+        <li>
+            <a href="sdm.html">
+                <i class="fa-solid fa-users"></i>
+                SDM
+            </a>
+        </li>
+
+        <li>
+            <a href="galeri-admin.html">
+                <i class="fa-solid fa-images"></i>
+                Galeri
+            </a>
+        </li>
+
+        <li>
+            <a href="../index.html" id="logoutBtn">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Logout
+            </a>
+        </li>
+
+    </ul>
+
+</aside>
+
+<!-- MAIN -->
+
+<main class="main-content">
+
+<div class="topbar">
+
+<h1>Dashboard Admin Sinode</h1>
+
+<div class="admin-profile">
+
+<span id="adminName"></span>
+
+</div>
+
+</div>
+
+<div class="dashboard-cards">
+
+<div class="dashboard-card">
+
+    <i class="fa-solid fa-newspaper"></i>
+
+    <h2 id="totalBerita">0</h2>
+
+    <p>Total Berita</p>
+
+</div>
+
+<div class="dashboard-card">
+
+    <i class="fa-solid fa-users"></i>
+
+    <h2 id="totalSDM">0</h2>
+
+    <p>Total SDM</p>
+
+</div>
+
+</div>
+
+<div class="welcome-card">
+
+    <h2>Selamat Datang</h2>
+
+    <p>
+        Dashboard ini digunakan untuk mengelola:
+    </p>
+
+    <ul>
+        <li>Berita GEKISIA</li>
+        <li>Data SDM GEKISIA</li>
+    </ul>
+
+</div>
+
+<div class="table-container">
+
+    <h2>Foto Kegiatan Terbaru</h2>
+
+    <div class="gallery-dashboard">
+
+        <div class="gallery-left">
+
+            <img
+                id="fotoTerbaru"
+                class="dashboard-image"
+                src="">
+
+        </div>
+
+        <div class="gallery-right">
+
+            <span class="badge">
+                <i class="fa-solid fa-image"></i>
+                Galeri
+            </span>
+
+            <h2 id="judulFoto">
+                -
+            </h2>
+
+            <p id="deskripsiFoto">
+                -
+            </p>
+
+            <hr>
+
+            <div class="gallery-info">
+
+                <p>
+                    <i class="fa-solid fa-calendar"></i>
+                    <span id="tanggalFoto">-</span>
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-user"></i>
+                    Admin Sinode
+                </p>
+
+            </div>
+
+            <a href="galeri-admin.html" class="btn-galeri">
+                Lihat Semua Galeri
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+</main>
+
+</div>
+
+<!-- <script src="../js/auth.js"></script> -->
+
+<script src="../js/dashboard-sinode.js"></script>
+
+</body>
+
+</html>

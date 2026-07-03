@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>Profil Gereja</title>
+
+    <link rel="stylesheet"
+    href="../css/dashboard.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+
+            <img src="../logo.png"
+            class="logo">
+
+            <h2>GEKISIA</h2>
+
+            <p>Admin Panel</p>
+
+        </div>
+
+        <ul>
+
+            <li>
+
+                <a href="dashboard-gereja.html">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    Dashboard
+
+                </a>
+
+            </li>
+
+            <li class="active">
+
+                <a href="gereja.html">
+
+                    <i class="fa-solid fa-church"></i>
+
+                    Profil Gereja
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="jemaat.html">
+
+                    <i class="fa-solid fa-users"></i>
+
+                    Data Jemaat
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="agenda.html">
+
+                    <i class="fa-solid fa-calendar-days"></i>
+
+                    Agenda
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="galeri.html">
+
+                    <i class="fa-solid fa-images"></i>
+
+                    Galeri
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="kontak.html">
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    Kontak
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="../index.html">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    Logout
+
+                </a>
+
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- MAIN -->
+
+    <main class="main-content">
+
+        <div class="topbar">
+
+            <h1>Profil Gereja</h1>
+
+        </div>
+
+        <div class="table-container">
+
+            <h2>Informasi Gereja</h2>
+
+            <br>
+
+            <div class="form-group">
+
+                <label>Nama Gereja</label>
+
+                <input
+                type="text"
+                id="nama_gereja">
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Alamat Gereja</label>
+
+                <textarea
+                id="alamat"
+                rows="4"></textarea>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Deskripsi Gereja</label>
+
+                <textarea
+                id="deskripsi"
+                rows="6"></textarea>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Nama Pendeta</label>
+
+                <input
+                type="text"
+                id="nama_pendeta">
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Foto Gereja</label>
+
+                <div class="preview-box">
+
+                    <img
+                        id="previewFotoGereja"
+                        src="../img/no-image.png"
+                        alt="Foto Gereja">
+
+                </div>
+
+                <input
+                    type="file"
+                    id="foto_gereja"
+                    accept="image/*">
+
+                <button
+                    type="button"
+                    class="btn-delete"
+                    onclick="hapusFotoGereja()">
+
+                    <i class="fa-solid fa-trash"></i>
+
+                    Hapus Foto Gereja
+
+                </button>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Foto Pendeta</label>
+
+                <div class="preview-box">
+
+                    <img
+                        id="previewFotoPendeta"
+                        src="../img/no-image.png"
+                        alt="Foto Pendeta">
+
+                </div>
+
+                <input
+                    type="file"
+                    id="foto_pendeta"
+                    accept="image/*">
+
+                <button
+                    type="button"
+                    class="btn-delete"
+                    onclick="hapusFotoPendeta()">
+
+                    <i class="fa-solid fa-trash"></i>
+
+                    Hapus Foto Pendeta
+
+                </button>
+
+            </div>
+
+            <button onclick="simpanProfil()">
+
+                <i class="fa-solid fa-floppy-disk"></i>
+
+                Simpan Profil
+
+            </button>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="../js/auth.js"></script>
+
+<script src="../js/gereja.js"></script>
+
+</body>
+
+</html>

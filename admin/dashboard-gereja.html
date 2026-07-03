@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard Admin Gereja</title>
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+
+            <img src="../logo.png" class="logo">
+
+            <h2>GEKISIA</h2>
+
+            <p>Admin Panel</p>
+
+        </div>
+
+        <ul>
+
+            <li>
+
+                <a href="dashboard-gereja.html">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    Dashboard
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="gereja.html">
+
+                    <i class="fa-solid fa-church"></i>
+
+                    Profil Gereja
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="jemaat.html">
+
+                    <i class="fa-solid fa-users"></i>
+
+                    Data Jemaat
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="agenda.html">
+
+                    <i class="fa-solid fa-calendar-days"></i>
+
+                    Agenda
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="galeri.html">
+
+                    <i class="fa-solid fa-images"></i>
+
+                    Galeri
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="kontak.html">
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    Kontak
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="../index.html" id="logoutBtn">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    Logout
+
+                </a>
+
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- MAIN -->
+
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+
+        <div class="topbar">
+
+            <h1>Dashboard Admin Gereja</h1>
+
+            <div class="admin-profile">
+
+                <span id="adminName"></span>
+
+            </div>
+
+        </div>
+
+        <!-- CARD -->
+
+        <div class="dashboard-cards">
+
+            <div class="dashboard-card">
+
+                <i class="fa-solid fa-users"></i>
+
+                <h2 id="totalJemaat">0</h2>
+
+                <p>Total Jemaat</p>
+
+            </div>
+
+            <div class="dashboard-card">
+
+                <i class="fa-solid fa-file-pdf"></i>
+
+                <h2 id="totalAgenda">0</h2>
+
+                <p>Warta Gereja</p>
+
+            </div>
+
+            <div class="dashboard-card">
+
+                <i class="fa-solid fa-images"></i>
+
+                <h2 id="totalKegiatan">0</h2>
+
+                <p>Kegiatan</p>
+
+            </div>
+
+            <div class="dashboard-card">
+
+                <i class="fa-solid fa-phone"></i>
+
+                <h2 id="totalKontak">4</h2>
+
+                <p>Kontak</p>
+
+            </div>
+
+        </div>
+
+        <!-- PROFIL -->
+
+        <div class="table-container">
+
+            <h2>Profil Gereja</h2>
+
+            <div class="profile-preview">
+
+                <div class="church-box">
+
+                    <img id="fotoGereja" src="">
+
+                </div>
+
+                <div class="pastor-box">
+
+                    <img id="fotoPendeta" src="">
+
+                </div>
+
+                <div class="church-info">
+
+                    <h2 id="namaGereja"></h2>
+
+                    <p>
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        <span id="alamatGereja"></span>
+
+                    </p>
+
+                    <p>
+
+                        <i class="fa-solid fa-user"></i>
+
+                        <span id="namaPendetaInfo"></span>
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- RINGKASAN JEMAAT -->
+
+        <div class="table-container">
+
+            <h2>Ringkasan Data Jemaat</h2>
+
+            <div class="jemaat-grid">
+
+                <div class="jemaat-box">
+
+                    👶
+
+                    <h3>Anak</h3>
+
+                    <h2 id="anakTotal">0</h2>
+
+                </div>
+
+                <div class="jemaat-box">
+
+                    🧒
+
+                    <h3>Remaja</h3>
+
+                    <h2 id="remajaTotal">0</h2>
+
+                </div>
+
+                <div class="jemaat-box">
+
+                    🙋
+
+                    <h3>Pemuda</h3>
+
+                    <h2 id="pemudaTotal">0</h2>
+
+                </div>
+
+                <div class="jemaat-box">
+
+                    👨
+
+                    <h3>Dewasa</h3>
+
+                    <h2 id="dewasaTotal">0</h2>
+
+                </div>
+
+                <div class="jemaat-box">
+
+                    👴
+
+                    <h3>Lansia</h3>
+
+                    <h2 id="lansiaTotal">0</h2>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- WARTA -->
+
+        <div class="table-container">
+
+            <div class="section-header">
+
+                <h2>Warta Gereja Terbaru</h2>
+
+                <a href="agenda.html">
+
+                    Lihat Semua
+
+                </a>
+
+            </div>
+
+            <div id="wartaPreview">
+
+                Belum ada Warta Gereja
+
+            </div>
+
+        </div>
+
+        <!-- KEGIATAN -->
+
+        <div class="table-container">
+
+            <div class="section-header">
+
+                <h2>Kegiatan Terbaru</h2>
+
+                <a href="galeri.html">
+
+                    Lihat Semua
+
+                </a>
+
+            </div>
+
+            <div class="dashboard-gallery"
+
+            id="galeriPreview">
+
+            </div>
+
+        </div>
+
+        <!-- QUICK MENU -->
+
+        <div class="table-container">
+
+            <h2>Akses Cepat</h2>
+
+            <div class="quick-menu">
+
+                <a href="gereja.html">
+
+                    <i class="fa-solid fa-church"></i>
+
+                    <br><br>
+
+                    Profil Gereja
+
+                </a>
+
+                <a href="jemaat.html">
+
+                    <i class="fa-solid fa-users"></i>
+
+                    <br><br>
+
+                    Data Jemaat
+
+                </a>
+
+                <a href="warta.html">
+
+                    <i class="fa-solid fa-file-pdf"></i>
+
+                    <br><br>
+
+                    Warta
+
+                </a>
+
+                <a href="galeri.html">
+
+                    <i class="fa-solid fa-images"></i>
+
+                    <br><br>
+
+                    Galeri
+
+                </a>
+
+                <a href="kontak.html">
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    <br><br>
+
+                    Kontak
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="../js/auth.js"></script>
+<script src="../js/dashboard-gereja.js"></script>
+
+</body>
+
+</html>

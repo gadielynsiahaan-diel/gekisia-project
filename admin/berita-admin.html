@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kelola Berita</title>
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+
+            <img src="../logo.png" class="logo">
+
+            <h2>GEKISIA</h2>
+
+            <p>Admin Panel</p>
+
+        </div>
+
+        <ul>
+
+            <li><a href="dashboard-sinode.html"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+
+            <li><a href="berita-admin.html"><i class="fa-solid fa-newspaper"></i> Berita</a></li>
+
+            <li><a href="sdm.html"><i class="fa-solid fa-users"></i> SDM</a></li>
+
+            <li><a href="galeri-admin.html"><i class="fa-solid fa-images"></i>Galeri</a></li>
+
+            <li><a href="../index.html" id="logoutBtn"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+
+        </ul>
+
+    </aside>
+
+    <!-- CONTENT -->
+
+    <main class="main-content">
+
+        <div class="topbar">
+
+            <h1>Kelola Berita</h1>
+
+            <!-- HEADER TABEL -->
+            <div class="table-header">
+
+                <input
+                    type="text"
+                    placeholder="Cari berita..."
+                    id="searchBerita"
+                >
+
+                <button id="btnTambah">
+                    + Tambah Berita
+                </button>
+
+            </div>
+
+        </div>
+
+            <!-- TABEL -->
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Kategori</th>
+                            <th>Judul</th>
+                            <th>Penulis</th>
+                            <th>Tanggal</th>
+                            <th>Aksi</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="listBerita">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+    </main>
+
+</div>
+
+<div id="modalBerita" class="modal">
+
+    <div class="modal-content">
+
+        <h2>Tambah Berita</h2>
+
+        <label>Kategori</label>
+
+        <select id="kategori">
+
+            <option value="Agenda">Agenda</option>
+
+            <option value="Event">Event</option>
+
+        </select>
+
+        <br><br>
+
+        <input
+            type="text"
+            id="judul"
+            placeholder="Judul Berita">
+
+        <br><br>
+
+        <textarea
+            id="isi"
+            placeholder="Isi Berita">
+        </textarea>
+
+        <br><br>
+
+        <input
+            type="text"
+            id="penulis"
+            placeholder="Penulis">
+
+        <br><br>
+
+        <input
+            type="date"
+            id="tanggal">
+
+        <br><br>
+
+        <label>Upload Gambar</label>
+
+        <input
+            type="file"
+            id="gambar">
+
+        <br><br>
+
+        <button onclick="simpanBerita()">
+            Simpan
+        </button>
+
+        <button onclick="tutupModal()">
+            Batal
+        </button>
+
+    </div>
+
+</div>
+
+<script src="../js/auth.js"></script>
+
+<script src="../js/berita.js"></script>
+
+</body>
+
+</html>
