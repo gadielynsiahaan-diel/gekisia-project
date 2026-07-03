@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Deranuk</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet"
+href="../css/gekisia.css">
+
+</head>
+
+<body data-church="35">
+
+<!-- NAVBAR -->
+
+<header class="navbar">
+
+    <div class="logo-section">
+
+        <img src="../../logo.png" alt="Logo">
+
+        <div>
+
+            <h2>GEKISIA</h2>
+
+            <p>Gereja Kristen Injili di Indonesia</p>
+
+        </div>
+
+    </div>
+
+    <nav>
+
+        <a href="../../index.html">Home</a>
+        <a href="../../about.html">About</a>
+        <a href="../../berita.html">Berita</a>
+
+    </nav>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero" id="hero">
+
+    <div class="hero-overlay">
+
+        <h1 id="namaGerejaHero"></h1>
+
+        <p>
+            Gereja Kristen Injili di Indonesia
+        </p>
+
+    </div>
+
+</section>
+
+<!-- CONTENT -->
+
+<div class="container">
+
+    <!-- FOTO GEREJA -->
+
+    <section class="content-card">
+
+        <h2 class="section-title">
+            Profil Gereja
+        </h2>
+
+        <div class="church-photo">
+
+            <!-- ADMIN UPLOAD FOTO GEREJA -->
+
+            <img
+            id="fotoGereja"
+            src=""
+            alt="Foto Gereja">
+
+        </div>
+
+    </section>
+
+    <!-- PENDETA -->
+
+    <section class="content-card">
+
+        <h2 class="section-title">
+            Gembala Jemaat
+        </h2>
+
+        <div class="pastor-card">
+
+            <!-- ADMIN UPLOAD FOTO PENDETA -->
+
+            <img
+            id="fotoPendeta"
+            src=""
+            alt="Pendeta">
+
+            <div>
+
+                <!-- ADMIN ISI NAMA -->
+
+                <h3 id="namaPendeta"></h3>
+
+                <p id="deskripsiGereja"></p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ALAMAT -->
+
+    <section class="content-card">
+
+        <h2 class="section-title">
+            Alamat Gereja
+        </h2>
+
+        <div class="info-box" id="alamatGereja"></div>
+
+    </section>
+
+    <!-- DATA JEMAAT -->
+
+    <section class="content-card">
+
+        <h2 class="section-title">
+            Data Jemaat
+        </h2>
+
+        <div class="member-table">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Kategori</th>
+                        <th>Jumlah</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Anak</td>
+                        <td id="anak"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Remaja</td>
+                        <td id="remaja"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Pemuda</td>
+                        <td id="pemuda"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Dewasa</td>
+                        <td id="dewasa"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Lansia</td>
+                        <td id="lansia"></td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+    <!-- WARTA -->
+
+    <section class="content-card">
+
+      <h2 class="section-title">
+        Warta Gereja
+      </h2>
+
+      <div
+        class="warta-list"
+        id="listWarta">
+        
+    </div>
+
+    </section>
+
+
+    <!-- KEGIATAN GEREJA -->
+
+    <section class="content-card">
+
+        <h2 class="section-title">
+            Kegiatan Gereja
+        </h2>
+
+        <!-- KEGIATAN -->
+
+        <div id="listGaleri"></div>
+
+    </section>
+
+        <!-- CONTACT -->
+
+        <section class="content-card">
+
+            <h2 class="section-title">
+                Kontak Gereja
+            </h2>
+
+            <div class="contact-grid">
+
+                <a id="telepon" href="#">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>Telepon</span>
+                </a>
+
+                <a id="email" href="#">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>Email</span>
+                </a>
+
+                <a id="instagram" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                    Instagram
+                </a>
+
+                <a id="facebook" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                    Facebook
+                </a>
+
+                <a id="tiktok" target="_blank">
+                    <i class="fab fa-tiktok"></i>
+                    TikTok
+                </a>
+
+                <a id="youtube" target="_blank">
+                    <i class="fab fa-youtube"></i>
+                    YouTube
+                </a>
+
+            </div>
+
+        </section>
+
+    <section class="content-card">
+
+        <h2 class="section-title">
+
+            Lokasi Gereja
+
+        </h2>
+
+        <iframe
+            id="maps"
+            width="100%"
+            height="350"
+            style="border:0;border-radius:10px;"
+            loading="lazy"
+            allowfullscreen>
+
+        </iframe>
+
+    </section>
+
+</div>
+
+<script src="../../js/gereja-publik.js"></script>
+
+</body>
+</html>
