@@ -1,6 +1,6 @@
 async function loadSDM() {
 
-    const response = await fetch("https://gekisia-project-production.up.railway.app/api/sdm");
+    const response = await fetch("https://gekisia-project.vercel.app/api/sdm");
     const data = await response.json();
 
     let kependetaan = "";
