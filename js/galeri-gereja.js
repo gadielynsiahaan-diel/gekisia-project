@@ -1,7 +1,7 @@
 const currentAdmin = JSON.parse(localStorage.getItem("admin"));
 
 const API =
-`https://gekisia-project-production.up.railway.app/api/galeri/${currentAdmin.church_id}`;
+`https://gekisia-project.vercel.app/api/galeri/${currentAdmin.church_id}`;
 
 let editId = null;
 
@@ -26,7 +26,7 @@ async function loadGaleri(){
             <td>
 
                 <img
-                src="https://gekisia-project-production.up.railway.app/uploads/${item.gambar}"
+                src="https://gekisia-project.vercel.app/uploads/${item.gambar}"
                 class="foto-galeri">
 
             </td>
