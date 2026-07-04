@@ -1,7 +1,7 @@
 async function loadBerita(){
 
     const response = await fetch(
-        "https://gekisia-project-production.up.railway.app/api/berita"
+        "https://gekisia-project.vercel.app/api/berita"
     );
 
     const data = await response.json();
@@ -13,7 +13,7 @@ async function loadBerita(){
 
         // gambar sebenarnya adalah file PDF
         const pdf =
-        "https://gekisia-project-production.up.railway.app/uploads/" + item.gambar;
+        "https://gekisia-project.vercel.app/uploads/" + item.gambar;
 
         const card = `
 
