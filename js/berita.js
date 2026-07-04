@@ -3,7 +3,7 @@ let editId = null;
 async function loadBerita(){
 
     const response = await fetch(
-        "http://localhost:5000/api/berita"
+        "https://gekisia-project-production.up.railway.app/api/berita"
     );
 
     const data = await response.json();
@@ -53,7 +53,7 @@ async function loadBerita(){
 async function editBerita(id){
 
     const response = await fetch(
-        "http://localhost:5000/api/berita"
+        "https://gekisia-project-production.up.railway.app/api/berita"
     );
 
     const data = await response.json();
@@ -81,7 +81,7 @@ async function hapusBerita(id){
 
     await fetch(
 
-        "http://localhost:5000/api/berita/"+id,
+        "https://gekisia-project-production.up.railway.app/api/berita/"+id,
 
         {
 
@@ -145,7 +145,7 @@ async function simpanBerita(){
 
     const response = await fetch(
 
-        "http://localhost:5000/api/berita",
+        "https://gekisia-project-production.up.railway.app/api/berita",
 
         {
 
