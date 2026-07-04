@@ -3,7 +3,7 @@ console.log("jemaat.js berhasil dimuat");
 const currentAdmin = JSON.parse(localStorage.getItem("admin"));
 
 const API =
-`http://localhost:5000/api/jemaat/${currentAdmin.church_id}`;
+`https://gekisia-project-production.up.railway.app/api/jemaat/${currentAdmin.church_id}`;
 
 let editId = null;
 
