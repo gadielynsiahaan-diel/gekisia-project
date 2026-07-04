@@ -111,3 +111,37 @@
 
   border-radius:8px;
 }
+
+@media screen and (max-width: 768px) {
+
+  .navbar{
+    padding: 10px 15px;
+    flex-wrap: wrap;
+  }
+
+  .logo-section img{
+    width: 45px;
+    height: 45px;
+  }
+
+  .logo-section h1{
+    font-size: 18px;
+  }
+
+  .logo-section p{
+    font-size: 10px;
+  }
+
+  .nav-links{
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .nav-links a{
+    font-size: 13px;
+  }
+
+}
