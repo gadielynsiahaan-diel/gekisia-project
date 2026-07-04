@@ -1,23 +1,29 @@
-const currentAdmin = JSON.parse(localStorage.getItem("admin"));
+const adminData = JSON.parse(localStorage.getItem("admin"));
 
-const API =
-`https://gekisia-project.vercel.app/api/galeri/${currentAdmin.church_id}`;
+console.log("ADMIN :", adminData);
+
+const API = "https://gekisia-project.vercel.app/api/galeri-sinode";
 
 let editId = null;
 
-async function loadGaleri(){
+async function loadGaleriSinode(){
 
     const response = await fetch(API);
 
     const data = await response.json();
 
+    if(!Array.isArray(data)){
+
+        return;
+
+    }
+
     let html = "";
 
     data.forEach(item=>{
 
-        const tanggal = item.tanggal
-        ? new Date(item.tanggal).toLocaleDateString("id-ID")
-        : "-";
+        const tanggal = new Date(item.tanggal)
+        .toLocaleDateString("id-ID");
 
         html += `
 
@@ -69,7 +75,7 @@ async function loadGaleri(){
 
 }
 
-loadGaleri();
+loadGaleriSinode();
 
 async function editGaleri(id){
 
@@ -78,6 +84,14 @@ async function editGaleri(id){
     const data = await response.json();
 
     const galeri = data.find(item => item.id == id);
+
+    if(!galeri){
+
+        alert("Data galeri tidak ditemukan.");
+
+        return;
+
+    }
 
     editId = id;
 
@@ -116,19 +130,21 @@ async function simpanGaleri(){
 
     const formData = new FormData();
 
-    formData.append(
-        "judul",
-        document.getElementById("judul").value
-    );
+    const judul = document.getElementById("judul").value.trim();
+
+    if(judul===""){
+
+        alert("Judul galeri tidak boleh kosong.");
+
+        return;
+
+    }
+
+    formData.append("judul", judul);
 
     formData.append(
         "deskripsi",
         document.getElementById("deskripsi").value
-    );
-
-    formData.append(
-        "church_id",
-        currentAdmin.church_id
     );
 
     if(document.getElementById("gambar").files[0]){
@@ -141,31 +157,23 @@ async function simpanGaleri(){
     }
 
     let url = API;
-    let method="POST";
+    let method = "POST";
 
     if(editId){
 
-        url = API.replace(
-
-            `/${currentAdmin.church_id}`,
-
-            `/${editId}/${currentAdmin.church_id}`
-
-        );
+        url = `${API}/${editId}`;
 
         method = "PUT";
 
     }
 
-    console.log(url);
-    console.log(method);
-
     const response = await fetch(url,{
-        method,
-        body:formData
-    });
 
-    console.log("STATUS :",response.status);
+        method,
+
+        body:formData
+
+    });
 
     const data = await response.json();
 
@@ -173,9 +181,11 @@ async function simpanGaleri(){
 
         alert(data.message);
 
+        editId = null;
+
         tutupModal();
 
-        loadGaleri();
+        loadGaleriSinode();
 
     }else{
 
@@ -195,13 +205,7 @@ async function hapusGaleri(id){
 
         const response = await fetch(
 
-            API.replace(
-
-                `/${currentAdmin.church_id}`,
-
-                `/${id}/${currentAdmin.church_id}`
-
-            ),
+            `${API}/${id}`,
 
             {
 
@@ -213,9 +217,17 @@ async function hapusGaleri(id){
 
         const hasil = await response.json();
 
-        alert(hasil.message);
+        if(response.ok){
 
-        loadGaleri();
+            alert(hasil.message);
+
+            loadGaleriSinode();
+
+        }else{
+
+            alert(hasil.message);
+
+        }
 
     }catch(err){
 
