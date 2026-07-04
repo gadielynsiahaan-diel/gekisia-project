@@ -1,7 +1,7 @@
 const currentAdmin = JSON.parse(localStorage.getItem("admin"));
 
 const API =
-`http://localhost:5000/api/kontak/${currentAdmin.church_id}`;
+`https://gekisia-project-production.up.railway.app/api/kontak/${currentAdmin.church_id}`;
 
 // ==========================
 // LOAD DATA
