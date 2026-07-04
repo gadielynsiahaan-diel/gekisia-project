@@ -601,3 +601,14 @@
     font-size:18px;
     font-weight:700;
 }
+
+@media (max-width:768px){
+    .verse-section{
+        padding: 10px 15px;
+    }
+
+    .verse-section p{
+        font-size: 14px;
+        line-height: 1.4;
+    }
+}
