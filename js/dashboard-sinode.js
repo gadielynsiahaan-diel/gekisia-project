@@ -8,7 +8,7 @@ document.getElementById("adminName").innerHTML=admin.nama_lengkap;
 
 async function loadDashboard(){
 
-    const res = await fetch("https://gekisia-project-production.up.railway.app/api/dashboard");
+    const res = await fetch("https://gekisia-project.vercel.app/api/dashboard");
 
     const data = await res.json();
 
@@ -24,7 +24,7 @@ async function loadFotoTerbaru(){
 
     try{
 
-        const response=await fetch("https://gekisia-project-production.up.railway.app/api/galeri");
+        const response=await fetch("https://gekisia-project.vercel.app/api/galeri");
         const data=await response.json();
 
         console.log(data);
@@ -34,7 +34,7 @@ async function loadFotoTerbaru(){
         const foto=data[0];
 
         document.getElementById("fotoTerbaru").src=
-        "https://gekisia-project-production.up.railway.app/uploads/"+foto.gambar;
+        "https://gekisia-project.vercel.app/uploads/"+foto.gambar;
 
         document.getElementById("judulFoto").innerHTML=
         foto.judul;
