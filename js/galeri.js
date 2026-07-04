@@ -2,7 +2,7 @@ const adminData = JSON.parse(localStorage.getItem("admin"));
 
 console.log("ADMIN :", adminData);
 
-const API = "http://localhost:5000/api/galeri-sinode";
+const API = "https://gekisia-project-production.up.railway.app/api/galeri-sinode";
 
 let editId = null;
 
@@ -32,7 +32,7 @@ async function loadGaleriSinode(){
             <td>
 
                 <img
-                src="http://localhost:5000/uploads/${item.gambar}"
+                src="https://gekisia-project-production.up.railway.app/uploads/${item.gambar}"
                 class="foto-galeri">
 
             </td>
