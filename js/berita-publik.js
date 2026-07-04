@@ -1,7 +1,7 @@
 async function loadBerita(){
 
     const response = await fetch(
-        "http://localhost:5000/api/berita"
+        "https://gekisia-project-production.up.railway.app/api/berita"
     );
 
     const data = await response.json();
@@ -13,7 +13,7 @@ async function loadBerita(){
 
         // gambar sebenarnya adalah file PDF
         const pdf =
-        "http://localhost:5000/uploads/" + item.gambar;
+        "https://gekisia-project-production.up.railway.app/uploads/" + item.gambar;
 
         const card = `
 
