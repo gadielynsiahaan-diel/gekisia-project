@@ -453,20 +453,25 @@
 
 /* RESPONSIVE */
 
-@media(max-width:768px){
+@media (max-width: 768px) {
 
-  .hero-content h2{
-    font-size:40px;
-  }
+    .hero-content h2{
+        font-size:20px;
+        letter-spacing:4px;
+    }
 
-  .hero-content h1{
-    font-size:50px;
-  }
+    .hero-content h1{
+        font-size:34px;
+        line-height:1.2;
+    }
 
-  .korwil-section,
-  .gereja-section{
-    padding:80px 20px;
-  }
+    .hero-content p{
+        font-size:14px;
+    }
+
+    .hero-logo img{
+        width:180px;
+    }
 
 }
 
