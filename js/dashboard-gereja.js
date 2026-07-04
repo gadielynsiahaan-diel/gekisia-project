@@ -9,7 +9,7 @@ async function loadDashboard(){
 
     const response = await fetch(
 
-        `https://gekisia-project-production.up.railway.app/api/dashboard/gereja/${admin.church_id}`
+        `https://gekisia-project.vercel.app/api/dashboard/gereja/${admin.church_id}`
 
     );
 
@@ -54,7 +54,7 @@ async function loadProfil() {
 
     const response = await fetch(
 
-    `https://gekisia-project-production.up.railway.app/api/profil/${admin.church_id}`
+    `https://gekisia-project.vercel.app/api/profil/${admin.church_id}`
 
     );
 
@@ -72,10 +72,10 @@ async function loadProfil() {
         data.nama_pendeta;
 
     document.getElementById("fotoGereja").src =
-        "https://gekisia-project-production.up.railway.app/uploads/" + data.foto_gereja;
+        "https://gekisia-project.vercel.app/uploads/" + data.foto_gereja;
 
     document.getElementById("fotoPendeta").src =
-        "https://gekisia-project-production.up.railway.app/uploads/" + data.foto_pendeta;
+        "https://gekisia-project.vercel.app/uploads/" + data.foto_pendeta;
 
 }
 
@@ -91,7 +91,7 @@ async function loadWarta(){
 
     const response = await fetch(
 
-    `https://gekisia-project-production.up.railway.app/api/agenda/${admin.church_id}`
+    `https://gekisia-project.vercel.app/api/agenda/${admin.church_id}`
 
     );
 
@@ -127,7 +127,7 @@ async function loadGaleri(){
 
     const response = await fetch(
 
-    `https://gekisia-project-production.up.railway.app/api/galeri/${admin.church_id}`
+    `https://gekisia-project.vercel.app/api/galeri/${admin.church_id}`
 
     );
 
@@ -140,7 +140,7 @@ async function loadGaleri(){
         html+=`
 
         <img
-        src="https://gekisia-project-production.up.railway.app/uploads/${item.gambar}">
+        src="https://gekisia-project.vercel.app/uploads/${item.gambar}">
 
         `;
 
