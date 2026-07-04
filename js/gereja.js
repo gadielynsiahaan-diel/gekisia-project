@@ -11,7 +11,7 @@ async function loadProfil(){
 
         const response = await fetch(
 
-        `https://gekisia-project-production.up.railway.app/api/profil/${admin.church_id}`
+        `https://gekisia-project.vercel.app/api/profil/${admin.church_id}`
 
         );
 
@@ -34,14 +34,14 @@ async function loadProfil(){
         if(data.foto_gereja){
 
             document.getElementById("previewFotoGereja").src =
-            `https://gekisia-project-production.up.railway.app/uploads/${data.foto_gereja}`;
+            `https://gekisia-project.vercel.app/uploads/${data.foto_gereja}`;
 
         }
 
         if(data.foto_pendeta){
 
             document.getElementById("previewFotoPendeta").src =
-            `https://gekisia-project-production.up.railway.app/uploads/${data.foto_pendeta}`;
+            `https://gekisia-project.vercel.app/uploads/${data.foto_pendeta}`;
 
         }
 
@@ -135,7 +135,7 @@ async function simpanProfil(){
 
     const response = await fetch(
 
-        `https://gekisia-project-production.up.railway.app/api/profil/${admin.church_id}`,
+        `https://gekisia-project.vercel.app/api/profil/${admin.church_id}`,
 
     {
         method:"POST",
@@ -158,7 +158,7 @@ async function hapusFotoGereja(){
     const admin = JSON.parse(localStorage.getItem("admin"));
 
     const response = await fetch(
-        `https://gekisia-project-production.up.railway.app/api/profil/${admin.church_id}/foto-gereja`,
+        `https://gekisia-project.vercel.app/api/profil/${admin.church_id}/foto-gereja`,
         {
             method:"DELETE"
         }
@@ -182,7 +182,7 @@ async function hapusFotoPendeta(){
     const admin = JSON.parse(localStorage.getItem("admin"));
 
     const response = await fetch(
-        `https://gekisia-project-production.up.railway.app/api/profil/${admin.church_id}/foto-pendeta`,
+        `https://gekisia-project.vercel.app/api/profil/${admin.church_id}/foto-pendeta`,
         {
             method:"DELETE"
         }
