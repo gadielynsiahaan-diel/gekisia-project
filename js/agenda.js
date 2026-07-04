@@ -1,7 +1,7 @@
 const currentAdmin = JSON.parse(localStorage.getItem("admin"));
 
 const API =
-`http://localhost:5000/api/agenda/${currentAdmin.church_id}`;
+`https://gekisia-project-production.up.railway.app/api/agenda/${currentAdmin.church_id}`;
 
 let editId = null;
 
@@ -33,7 +33,7 @@ async function loadAgenda(){
             <td>
 
                 <a
-                href="http://localhost:5000/uploads/${item.file_pdf}"
+                href="https://gekisia-project-production.up.railway.app/uploads/${item.file_pdf}"
                 target="_blank">
 
                 Lihat PDF
