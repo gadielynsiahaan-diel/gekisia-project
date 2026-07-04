@@ -603,12 +603,9 @@
 }
 
 @media (max-width:768px){
-    .verse-section{
-        padding: 10px 15px;
-    }
-
-    .verse-section p{
-        font-size: 14px;
-        line-height: 1.4;
+    .verse-text{
+        width: 90%;
+        font-size: 15px;
+        line-height: 1.8;
     }
 }
