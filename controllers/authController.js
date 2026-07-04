@@ -70,10 +70,14 @@ exports.login = (req, res) => {
     
     db.query(sql,values,(err,result)=>{
 
-        if(err){
-
-            return res.status(500).json(err);
-
+        if (err) {
+            console.log(err);
+            return res.status(500).json({
+                success: false,
+                message: err.message,
+                code: err.code,
+                sqlMessage: err.sqlMessage
+            });
         }
 
         if(result.length===0){
