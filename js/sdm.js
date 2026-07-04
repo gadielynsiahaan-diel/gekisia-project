@@ -1,7 +1,7 @@
 async function loadSDM(){
 
     const res =
-    await fetch("http://localhost:5000/api/sdm");
+    await fetch("https://gekisia-project-production.up.railway.app/api/sdm");
 
     const data =
     await res.json();
@@ -70,7 +70,7 @@ async function simpanSDM(){
 
     };
 
-    let url="http://localhost:5000/api/sdm";
+    let url="https://gekisia-project-production.up.railway.app/api/sdm";
 
     let method="POST";
 
@@ -101,7 +101,7 @@ async function simpanSDM(){
 async function editSDM(id){
 
     const res =
-    await fetch("http://localhost:5000/api/sdm");
+    await fetch("https://gekisia-project-production.up.railway.app/api/sdm");
 
     const data =
     await res.json();
@@ -127,7 +127,7 @@ async function hapusSDM(id){
 
     await fetch(
 
-        "http://localhost:5000/api/sdm/"+id,
+        "https://gekisia-project-production.up.railway.app/api/sdm/"+id,
 
         {
 
