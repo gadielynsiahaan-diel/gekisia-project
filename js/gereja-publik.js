@@ -5,7 +5,7 @@
 const churchId = document.body.dataset.church;
 console.log("Church ID =", churchId);
 
-const API = "http://localhost:5000/api";
+const API = "https://gekisia-project-production.up.railway.app/api";
 
 // =====================================
 // LOAD PROFIL
@@ -52,13 +52,13 @@ async function loadProfil(){
         const fotoGereja = document.getElementById("fotoGereja");
 
         fotoGereja.src =
-        `http://localhost:5000/uploads/${data.foto_gereja}`;
+        `https://gekisia-project-production.up.railway.app/uploads/${data.foto_gereja}`;
 
         console.log("Foto Gereja =", fotoGereja.src);
 
         // Hero
         document.getElementById("hero").style.backgroundImage =
-        `url(http://localhost:5000/uploads/${data.foto_gereja})`;
+        `url(https://gekisia-project-production.up.railway.app/uploads/${data.foto_gereja})`;
 
         document.getElementById("hero").style.backgroundSize = "cover";
         document.getElementById("hero").style.backgroundPosition = "center";
@@ -72,7 +72,7 @@ async function loadProfil(){
         document.getElementById("fotoPendeta");
 
         fotoPendeta.src =
-        `http://localhost:5000/uploads/${data.foto_pendeta}`;
+        `https://gekisia-project-production.up.railway.app/uploads/${data.foto_pendeta}`;
 
         console.log("Foto Pendeta =", fotoPendeta.src);
 
@@ -184,7 +184,7 @@ async function loadAgenda(){
 
                 <a
 
-                href="http://localhost:5000/uploads/${item.file_pdf}"
+                href="https://gekisia-project-production.up.railway.app/uploads/${item.file_pdf}"
 
                 target="_blank"
 
@@ -263,7 +263,7 @@ async function loadGaleri(){
             <div class="activity-card">
 
                 <img
-                    src="http://localhost:5000/uploads/${item.gambar}"
+                    src="https://gekisia-project-production.up.railway.app/uploads/${item.gambar}"
                     class="activity-image"
                 >
 
