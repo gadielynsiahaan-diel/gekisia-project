@@ -112,65 +112,90 @@
   border-radius:8px;
 }
 
-@media screen and (max-width:768px){
-  .dropdown-menu{
-      position:absolute;
-      left:50%;
-      transform:translateX(-50%);
-      top:38px;
-
-      width:180px;
-      max-width:90vw;
-      max-height:220px;
-
-      overflow-y:auto;
-      overflow-x:hidden;
-  }
-
-  .dropdown:hover .dropdown-menu{
-      transform:translateX(-50%);
-  }
-
-  .dropdown-menu li{
-      padding:10px 15px;
-  }
-
-  .dropdown-menu li a{
-      font-size:14px;
-  }
-
-}
-
 @media screen and (max-width: 768px) {
 
   .navbar{
-    padding: 10px 15px;
-    flex-wrap: wrap;
+    padding:10px 15px;
+    flex-wrap:wrap;
+  }
+
+  .logo-section{
+    gap:10px;
   }
 
   .logo-section img{
-    width: 45px;
-    height: 45px;
+    width:45px;
+    height:45px;
   }
 
   .logo-section h1{
-    font-size: 18px;
+    font-size:18px;
   }
 
   .logo-section p{
-    font-size: 10px;
+    font-size:10px;
   }
 
   .nav-links{
-    width: 100%;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 10px;
+    width:100%;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:10px;
+  }
+
+  .nav-links li{
+    position:relative;
   }
 
   .nav-links a{
-    font-size: 13px;
+    font-size:13px;
+  }
+
+  .login-btn{
+    padding:10px 15px;
+  }
+
+  /* DROPDOWN HP */
+
+  .dropdown-menu{
+
+    position:absolute;
+
+    top:38px;
+
+    left:auto;
+    right:0;
+
+    width:180px;
+    max-width:90vw;
+
+    max-height:220px;
+
+    overflow-y:auto;
+    overflow-x:hidden;
+
+    border-radius:10px;
+
+    transform:none;
+  }
+
+  .dropdown:hover .dropdown-menu{
+
+    transform:none;
+
+  }
+
+  .dropdown-menu li{
+
+    padding:10px 15px;
+
+  }
+
+  .dropdown-menu li a{
+
+    font-size:14px;
+
   }
 
 }
