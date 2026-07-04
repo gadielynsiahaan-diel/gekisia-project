@@ -603,9 +603,19 @@
 }
 
 @media (max-width:768px){
-    .verse-text{
-        width: 90%;
-        font-size: 15px;
-        line-height: 1.8;
+    .verse-box{
+    width: 90%;
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 12px 20px;
+
+    font-size: 14px;
+    line-height: 1.8;
+
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: normal;
+
+    text-align: center;
     }
 }
