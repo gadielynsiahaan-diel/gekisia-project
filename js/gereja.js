@@ -1,230 +1,244 @@
-// ===============================
-// LOAD PROFIL
-// ===============================
+console.log("jemaat.js berhasil dimuat");
 
-async function loadProfil(){
+const currentAdmin = JSON.parse(localStorage.getItem("admin"));
 
-    try{
+const API =
+`https://gekisia-project-production.up.railway.app/api/jemaat/${currentAdmin.church_id}`;
 
-        const admin =
-        JSON.parse(localStorage.getItem("admin"));
+let editId = null;
 
-        const response = await fetch(
+// ======================
+// LOAD DATA
+// ======================
 
-        `https://gekisia-project-production.up.railway.app/api/profil/${admin.church_id}`
+async function loadData(){
 
-        );
-
-        const data = await response.json();
-
-        if(!data.id) return;
-
-        document.getElementById("nama_gereja").value =
-        data.nama_gereja || "";
-
-        document.getElementById("alamat").value =
-        data.alamat || "";
-
-        document.getElementById("deskripsi").value =
-        data.deskripsi || "";
-
-        document.getElementById("nama_pendeta").value =
-        data.nama_pendeta || "";
-
-        if(data.foto_gereja){
-
-            document.getElementById("previewFotoGereja").src =
-            `https://gekisia-project-production.up.railway.app/uploads/${data.foto_gereja}`;
-
-        }
-
-        if(data.foto_pendeta){
-
-            document.getElementById("previewFotoPendeta").src =
-            `https://gekisia-project-production.up.railway.app/uploads/${data.foto_pendeta}`;
-
-        }
-
-    }
-
-    catch(err){
-
-        console.log(err);
-
-    }
-
-}
-
-loadProfil();
-
-
-// ===============================
-// SIMPAN PROFIL
-// ===============================
-
-async function simpanProfil(){
-
-    const formData = new FormData();
-
-    formData.append(
-
-        "nama_gereja",
-
-        document.getElementById("nama_gereja").value
-
-    );
-
-    formData.append(
-
-        "alamat",
-
-        document.getElementById("alamat").value
-
-    );
-
-    formData.append(
-
-        "deskripsi",
-
-        document.getElementById("deskripsi").value
-
-    );
-
-    formData.append(
-
-        "nama_pendeta",
-
-        document.getElementById("nama_pendeta").value
-
-    );
-
-    const fotoGereja =
-
-    document.getElementById("foto_gereja").files[0];
-
-    if(fotoGereja){
-
-        formData.append(
-
-            "foto_gereja",
-
-            fotoGereja
-
-        );
-
-    }
-
-    const fotoPendeta =
-
-    document.getElementById("foto_pendeta").files[0];
-
-    if(fotoPendeta){
-
-        formData.append(
-
-            "foto_pendeta",
-
-            fotoPendeta
-
-        );
-
-    }
-
-    const admin =
-        JSON.parse(localStorage.getItem("admin"));
-
-    const response = await fetch(
-
-        `https://gekisia-project-production.up.railway.app/api/profil/${admin.church_id}`,
-
-    {
-        method:"POST",
-        body:formData
-    }
-    );
+    const response = await fetch(API);
 
     const data = await response.json();
 
-    alert(data.message);
+    if(!Array.isArray(data)){
 
-    loadProfil();
+        return;
+
+    }
+
+    console.log("DATA DARI API =", data);
+
+    let html = "";
+
+    data.forEach(item=>{
+
+        html += `
+        <tr>
+            <td>${item.tahun}</td>
+            <td>${item.anak}</td>
+            <td>${item.remaja}</td>
+            <td>${item.pemuda}</td>
+            <td>${item.dewasa}</td>
+            <td>${item.lansia}</td>
+            <td>${item.total}</td>
+            <td>
+                <button onclick='editData(${JSON.stringify(item)})'>
+                    Edit
+                </button>
+
+                <button onclick='hapusData(${item.id})'>
+                    Hapus
+                </button>
+            </td>
+        </tr>
+        `;
+
+    });
+
+    console.log(html);
+
+    document.getElementById("tbodyJemaat").innerHTML = html;
 
 }
 
-async function hapusFotoGereja(){
+loadData();
 
-    if(!confirm("Hapus foto gereja?")) return;
 
-    const admin = JSON.parse(localStorage.getItem("admin"));
+// ======================
+// MODAL
+// ======================
+
+function bukaModal(){
+
+    document.getElementById("modal").style.display="flex";
+
+}
+
+function tutupModal(){
+
+    document.getElementById("modal").style.display="none";
+
+    resetForm();
+
+}
+
+
+// ======================
+// RESET
+// ======================
+
+function resetForm(){
+
+    editId=null;
+
+    document.getElementById("anak").value="";
+
+    document.getElementById("remaja").value="";
+
+    document.getElementById("pemuda").value="";
+
+    document.getElementById("dewasa").value="";
+
+    document.getElementById("lansia").value="";
+
+    document.getElementById("tahun").value="";
+
+}
+
+
+// ======================
+// SIMPAN
+// ======================
+
+async function simpan() {
+
+    const data = {     
+
+        anak: Number(document.getElementById("anak").value),
+
+        remaja: Number(document.getElementById("remaja").value),
+
+        pemuda: Number(document.getElementById("pemuda").value),
+
+        dewasa: Number(document.getElementById("dewasa").value),
+
+        lansia: Number(document.getElementById("lansia").value),
+
+        tahun: Number(document.getElementById("tahun").value)
+
+    };
+
+    let url = API;
+    let method = "POST";
+
+    if(editId){
+
+        url = API.replace(
+
+            `/${currentAdmin.church_id}`,
+
+            `/${editId}/${currentAdmin.church_id}`
+
+        );
+
+        method = "PUT";
+
+    }
+
+    const response = await fetch(url,{
+
+        method,
+
+        headers:{
+            "Content-Type":"application/json"
+        },
+
+        body:JSON.stringify(data)
+
+    });
+
+    const result = await response.json();
+
+    if(response.ok){
+
+        alert(result.message);
+
+        tutupModal();
+
+        loadData();
+
+    }else{
+
+        alert(result.message);
+
+    }
+
+}
+
+// ======================
+// EDIT
+// ======================
+
+function editData(item){
+
+    editId=item.id;
+
+    document.getElementById("anak").value=item.anak;
+
+    document.getElementById("remaja").value=item.remaja;
+
+    document.getElementById("pemuda").value=item.pemuda;
+
+    document.getElementById("dewasa").value=item.dewasa;
+
+    document.getElementById("lansia").value=item.lansia;
+
+    document.getElementById("tahun").value=item.tahun;
+
+    bukaModal();
+
+}
+
+
+// ======================
+// HAPUS
+// ======================
+
+async function hapusData(id){
+
+    if(!confirm("Yakin ingin menghapus data ini?")){
+
+        return;
+
+    }
 
     const response = await fetch(
-        `https://gekisia-project-production.up.railway.app/api/profil/${admin.church_id}/foto-gereja`,
+
+        API.replace(
+
+            `/${currentAdmin.church_id}`,
+
+            `/${id}/${currentAdmin.church_id}`
+
+        ),
+
         {
+
             method:"DELETE"
+
         }
+
     );
 
-    const data = await response.json();
+    const result = await response.json();
 
-    alert(data.message);
+    if(response.ok){
 
-    document.getElementById("previewFotoGereja").src =
-    "../img/no-image.png";
+        alert(result.message);
 
-    loadProfil();
+        loadData();
 
-}
+    }else{
 
-async function hapusFotoPendeta(){
-
-    if(!confirm("Hapus foto pendeta?")) return;
-
-    const admin = JSON.parse(localStorage.getItem("admin"));
-
-    const response = await fetch(
-        `https://gekisia-project-production.up.railway.app/api/profil/${admin.church_id}/foto-pendeta`,
-        {
-            method:"DELETE"
-        }
-    );
-
-    const data = await response.json();
-
-    alert(data.message);
-
-    document.getElementById("previewFotoPendeta").src =
-    "../img/no-image.png";
-
-    loadProfil();
-
-}
-
-document
-.getElementById("foto_gereja")
-.addEventListener("change",function(){
-
-    const file=this.files[0];
-
-    if(file){
-
-        document.getElementById("previewFotoGereja").src =
-        URL.createObjectURL(file);
+        alert(result.message);
 
     }
 
-});
-
-document
-.getElementById("foto_pendeta")
-.addEventListener("change",function(){
-
-    const file=this.files[0];
-
-    if(file){
-
-        document.getElementById("previewFotoPendeta").src =
-        URL.createObjectURL(file);
-
-    }
-
-});
+}
