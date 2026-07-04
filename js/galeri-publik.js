@@ -1,7 +1,7 @@
 async function loadGaleriSinode(){
 
      const response = await fetch(
-        "https://gekisia-project-production.up.railway.app/api/galeri-sinode"
+        "https://gekisia-project.vercel.app/api/galeri-sinode"
     );
 
     const data = await response.json();
@@ -15,7 +15,7 @@ async function loadGaleriSinode(){
         <div class="activity-card">
 
             <img
-                src="https://gekisia-project-production.up.railway.app/uploads/${item.gambar}"
+                src="https://gekisia-project.vercel.app/uploads/${item.gambar}"
                 alt="${item.judul}">
 
             <h3>${item.judul}</h3>
